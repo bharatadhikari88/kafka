@@ -16,7 +16,7 @@ public class KafkaProducerAPI {
 	public String publish(@PathVariable String msg) {
 		Record record = new Record();
 		record.setMsg(msg);
-		kafkaTemplate.send("kafka_topic1", record);
+		kafkaTemplate.send("kafka_topic2", record);
 		return "published";
 
 	}
